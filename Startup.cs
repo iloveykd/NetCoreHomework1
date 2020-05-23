@@ -23,17 +23,21 @@ namespace homework1
         }
 
         public IConfiguration Configuration { get; }
-
+        public static readonly ILoggerFactory MyLoggerFactory
+            = LoggerFactory.Create(builder => { builder.AddConsole(); });
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             // using Microsoft.EntityFrameworkCore;
             services.AddDbContext<ContosoUniversityContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseLoggerFactory(MyLoggerFactory)
+                .UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
-            
-            services.AddControllers().AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling 
-            = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            //忽略全部json深度限制，也可在model中針對單一導覽設定
+            // services.AddControllers().AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling 
+            // = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            services.AddControllers().AddNewtonsoftJson();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
