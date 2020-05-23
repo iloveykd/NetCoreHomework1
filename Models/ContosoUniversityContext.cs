@@ -6,6 +6,8 @@ namespace homework1
 {
     public partial class ContosoUniversityContext : DbContext
     {
+        public DbSet<DepartCourse> DepartCourse { get; set; }
+
         public ContosoUniversityContext()
         {
         }
@@ -172,6 +174,11 @@ namespace homework1
                 entity.Property(e => e.LastName)
                     .IsRequired()
                     .HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<DepartCourse>(entity =>
+            {
+                entity.HasNoKey();
             });
 
             modelBuilder.Entity<VwCourseStudentCount>(entity =>

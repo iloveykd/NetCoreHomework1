@@ -23,7 +23,7 @@ namespace homework1
         [HttpGet("get")]
         public ActionResult<IEnumerable<Course>> GetCourse()
         {
-            return db.Course.Where(delete => delete.IsDeleted != true).ToList();
+            return db.Course.Include(a=>a.Department).Where(delete => delete.IsDeleted != true).ToList();
         }
         
 
@@ -95,32 +95,32 @@ namespace homework1
                 return result;
             }
 
-            CourseItem.IsDeleted = true;
+            // CourseItem.IsDeleted = true;
 
-            // db.Course.Remove(CourseItem);
-            // db.SaveChanges();
+            db.Course.Remove(CourseItem);
+            db.SaveChanges();
 
             
 
-            db.Entry(CourseItem).State = EntityState.Modified;
+            // db.Entry(CourseItem).State = EntityState.Modified;
 
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TodoItemExists(id))
-                {
-                    result.Message = NotFound().ToString();
-                    result.IsSuccess = false;
-                    return result;
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            // try
+            // {
+            //     db.SaveChanges();
+            // }
+            // catch (DbUpdateConcurrencyException)
+            // {
+            //     if (!TodoItemExists(id))
+            //     {
+            //         result.Message = NotFound().ToString();
+            //         result.IsSuccess = false;
+            //         return result;
+            //     }
+            //     else
+            //     {
+            //         throw;
+            //     }
+            // }
 
             return result;
 
