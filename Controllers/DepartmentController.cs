@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
+using Microsoft.AspNetCore.Http;
 //using homework1.Models;
 
 namespace homework1 {
     [Route ("api/[controller]")]
     [ApiController]
+    [ApiConventionType(typeof(DefaultApiConventions))]
     public class DepartmentController : ControllerBase {
         private readonly ContosoUniversityContext db;
         public DepartmentController (ContosoUniversityContext _db) {
@@ -26,6 +28,9 @@ namespace homework1 {
 
         // GET: api/Departments/5/num
         [HttpGet("{id}/num")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<IList<DepartCourse>>> Get部門課程數量表(int id)
         {
             var department = await db.DepartCourse.FromSqlInterpolated($@"SELECT
@@ -46,6 +51,9 @@ namespace homework1 {
 
         // GET: api/Departments/5/num
         [HttpGet("num")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
         public async Task<ActionResult<IList<DepartCourse>>> Get部門課程數量表All(int id)
         {
             var department = await db.DepartCourse.FromSqlInterpolated($@"SELECT
@@ -80,6 +88,8 @@ namespace homework1 {
 
         // PUT api/department/update/5
         [HttpPut ("update/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesDefaultResponseType]
         public ResultModel PutDepartment (int id, Department _department) { 
 
             var result = new ResultModel();

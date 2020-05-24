@@ -7,7 +7,6 @@ D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\bin\Debug\netcoreapp3.1\hom
 D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\bin\Debug\netcoreapp3.1\homework1.runtimeconfig.dev.json
 D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\bin\Debug\netcoreapp3.1\homework1.dll
 D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\bin\Debug\netcoreapp3.1\homework1.pdb
-D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\obj\Debug\netcoreapp3.1\homework1.csprojAssemblyReference.cache
 D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\obj\Debug\netcoreapp3.1\homework1.csproj.CoreCompileInputs.cache
 D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\obj\Debug\netcoreapp3.1\homework1.MvcApplicationPartsAssemblyInfo.cache
 D:\Documents\ASPNET訓練課程\Day2Lesson\homework1\obj\Debug\netcoreapp3.1\homework1.AssemblyInfoInputs.cache
