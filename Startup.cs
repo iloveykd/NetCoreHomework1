@@ -37,6 +37,10 @@ namespace homework1
             services.AddControllers().AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling 
             = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
+            // Register the Swagger services
+            services.AddSwaggerDocument();
+
+
             // services.AddControllers().AddNewtonsoftJson();
         }
 
@@ -49,6 +53,10 @@ namespace homework1
             }
 
             app.UseHttpsRedirection();
+
+            // Register the Swagger generator and the Swagger UI middlewares
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseRouting();
 
