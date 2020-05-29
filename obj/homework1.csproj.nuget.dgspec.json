@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {}
+    "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {}
   },
   "projects": {
-    "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {
+    "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
+        "projectUniqueName": "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
         "projectName": "homework1",
-        "projectPath": "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
+        "projectPath": "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
         "packagesPath": "C:\\Users\\Jacob.Wu\\.nuget\\packages\\",
-        "outputPath": "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\obj\\",
+        "outputPath": "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -89,7 +89,7 @@
             },
             "NSwag.AspNetCore": {
               "target": "Package",
-              "version": "[13.5.0, )"
+              "version": "[*, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
