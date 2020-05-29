@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {}
+    "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {
+    "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
+        "projectUniqueName": "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
         "projectName": "homework1",
-        "projectPath": "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
+        "projectPath": "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\homework1.csproj",
         "packagesPath": "C:\\Users\\Jacob.Wu\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\obj\\",
+        "outputPath": "d:\\Documents\\ASPNET訓練課程\\Day2Lesson\\homework1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
