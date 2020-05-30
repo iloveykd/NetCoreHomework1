@@ -19,7 +19,7 @@ namespace homework1 {
         }
 
         // GET api/department
-        [HttpGet ("get")]
+        [HttpGet]
         public ActionResult<IEnumerable<Department>> GetDepartments () {
 
             var temp = db.Department.ToList();
@@ -72,8 +72,8 @@ namespace homework1 {
         }
 
 
-        // POST api/department/add
-        [HttpPost ("add")]
+        // POST api/department
+        [HttpPost]
         public ResultModel PostDepartment (Department _department) { 
 
             
@@ -86,8 +86,8 @@ namespace homework1 {
             return result;
         }
 
-        // PUT api/department/update/5
-        [HttpPut ("update/{id}")]
+        // PUT api/department
+        [HttpPut ("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesDefaultResponseType]
         public ResultModel PutDepartment (int id, Department _department) { 
@@ -109,7 +109,7 @@ namespace homework1 {
         }
 
         // DELETE api/department/5/
-        [HttpDelete ("delete/{id}")]
+        [HttpDelete ("{id}")]
         public ResultModel DeleteDepartmentById (int id, string rowversion) {
             var result = new ResultModel();
 

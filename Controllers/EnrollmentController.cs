@@ -16,13 +16,13 @@ namespace homework1.Controllers {
         }
 
         // GET api/enrollment
-        [HttpGet ("get")]
+        [HttpGet]
         public ActionResult<IEnumerable<Enrollment>> GetEnrollments () {
             return db.Enrollment.Include(enrollment => enrollment.Student).ToList();
         }
 
         // POST api/enrollment/add
-        [HttpPost("add")]
+        [HttpPost]
         public ResultModel AddEnrollment (Enrollment _Enrollment) {
             var result = new ResultModel();
             
@@ -38,7 +38,7 @@ namespace homework1.Controllers {
         }
 
         // PUT api/enrollment/update/5
-        [HttpPut("update/{id}")]
+        [HttpPut("{id}")]
         public ResultModel UpdateEnrollment(int id, Enrollment _Enrollment)
         {
             var result = new ResultModel();
@@ -76,7 +76,7 @@ namespace homework1.Controllers {
         }
 
         // DELETE api/enrollment/delete/5
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("{id}")]
         public ResultModel DeleteEnrollmentById(int id)
         {
             var result = new ResultModel();

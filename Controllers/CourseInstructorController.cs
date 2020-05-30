@@ -16,7 +16,7 @@ namespace homework1 {
         }
 
         // GET api/courseinstructor/get
-        [HttpGet("get")]
+        [HttpGet]
         public ActionResult<IEnumerable<CourseInstructor>> GetCourseInstruct()
         {
             var test = db.CourseInstructor.ToList();
@@ -25,7 +25,7 @@ namespace homework1 {
         
 
         // POST api/courseinstruct/add
-        [HttpPost("add")]
+        [HttpPost]
         public ResultModel AddCourse (CourseInstructor _CourseInstructor) {
             var result = new ResultModel();
             
@@ -40,7 +40,7 @@ namespace homework1 {
         }
 
         // PUT api/courseinstruct/update/5
-        [HttpPut("update/{id}")]
+        [HttpPut("{id}")]
         public ResultModel UpdateCourse(int id, CourseInstructor _CourseInstructor)
         {
             var result = new ResultModel();
@@ -78,7 +78,7 @@ namespace homework1 {
         }
 
         // DELETE api/courseinstruct/delete/5
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("{id}")]
         public ResultModel DeleteCourseInstructorById(int id)
         {
             var result = new ResultModel();

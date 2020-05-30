@@ -16,14 +16,14 @@ namespace homework1.Controllers {
         }
 
         // GET api/officeassignment/get
-        [HttpGet ("get")]
+        [HttpGet]
         public ActionResult<IEnumerable<OfficeAssignment>> GetOfficeAssignments () {
 
             return db.OfficeAssignment.Include(office => office.Instructor).ToList();
         }
 
         // POST api/officeassignment/add
-        [HttpPost ("add")]
+        [HttpPost]
         public ResultModel PostOfficeAssignment (OfficeAssignment _office) { 
             var result = new ResultModel();
             
@@ -38,7 +38,7 @@ namespace homework1.Controllers {
         }
 
         // PUT api/officeassignment/5
-        [HttpPut ("update/{id}")]
+        [HttpPut ("{id}")]
         public ResultModel PutOfficeAssignment (int id, OfficeAssignment _office) { 
 
             var result = new ResultModel();
@@ -76,7 +76,7 @@ namespace homework1.Controllers {
         }
 
         // DELETE api/officeassignment/5
-        [HttpDelete ("delete/{id}")]
+        [HttpDelete ("{id}")]
         public ResultModel DeleteOfficeAssignmentById (int id) { 
 
             var result = new ResultModel();

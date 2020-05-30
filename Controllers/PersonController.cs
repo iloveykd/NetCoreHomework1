@@ -16,13 +16,13 @@ namespace homework1.Controllers {
         }
 
         // GET api/person
-        [HttpGet ("get")]
+        [HttpGet]
         public ActionResult<IEnumerable<Person>> GetPersons () {
             return db.Person.Where(delete => delete.IsDeleted != true).ToList();
         }
 
         // POST api/person
-        [HttpPost ("add")]
+        [HttpPost]
         public ResultModel PostPerson (Person _person) { 
             var result = new ResultModel();
             
@@ -39,7 +39,7 @@ namespace homework1.Controllers {
         }
 
         // PUT api/person/5
-        [HttpPut ("update/{id}")]
+        [HttpPut ("{id}")]
         public ResultModel PutPerson (int id, Person _person) { 
             var result = new ResultModel();
 
@@ -76,7 +76,7 @@ namespace homework1.Controllers {
         }
 
         // DELETE api/person/5
-        [HttpDelete ("delete/{id}")]
+        [HttpDelete ("{id}")]
         public ResultModel DeletePersonById (int id) { 
             var result = new ResultModel();
 

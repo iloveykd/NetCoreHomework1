@@ -46,7 +46,7 @@ namespace homework1 {
         }
 
         // POST api/courses
-        [HttpPost ("")]
+        [HttpPost]
         public void PostVwCourseStudents (VwCourseStudents value) { }
 
         // PUT api/courses/5
