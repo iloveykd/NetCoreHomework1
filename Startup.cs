@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using homework1.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -15,7 +16,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 
 namespace homework1 {
     public class Startup {
@@ -32,6 +32,9 @@ namespace homework1 {
             services.AddDbContext<ContosoUniversityContext> (options =>
                 options.UseLoggerFactory (MyLoggerFactory)
                 .UseSqlServer (Configuration.GetConnectionString ("DefaultConnection")));
+
+            //
+            services.Configure<AppSettings> (Configuration.GetSection ("JwtSettings"));
 
             //忽略全部json深度限制，也可在model中針對單一導覽設定
             services.AddControllers ().AddNewtonsoftJson (option => option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
